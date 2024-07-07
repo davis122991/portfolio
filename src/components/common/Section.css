@@ -1,0 +1,22 @@
+.section-container {
+    min-height: 100vh;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 4px;
+    }
+}

@@ -1,0 +1,22 @@
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    padding: 16px 16px;
+    background-color: #eee;
+    color: #666;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .skill {
+        padding: 12px 12px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        font-size: .8rem;
+    }
+}

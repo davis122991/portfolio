@@ -1,0 +1,50 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: #444;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: .8rem;
+}
+
+input {
+    display: block;
+    padding: 1rem;
+    width: 25%;
+    border: 1px solid rgb(71, 70, 70);
+    font-size: 1rem;
+    resize: none;
+    border-radius: 5px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+textarea {
+    width: 50%;
+    resize: none;
+    min-height: 200px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    input {
+        width: 50%;
+    }
+
+    textarea {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    input, textarea {
+        width: 90%;
+    }
+}

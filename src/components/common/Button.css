@@ -1,0 +1,27 @@
+.btn {
+    padding: 12px 28px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #1da1f2;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.primary {
+    background-color: #1da1f2;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .btn {
+        padding: 8px 26px;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .btn {
+        width: 100%;
+    }
+}
