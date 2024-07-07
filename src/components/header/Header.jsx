@@ -1,13 +1,10 @@
 import { useState } from 'react';
-import './Header.css';
 import { IconMenu, IconClose } from '../common/Icons';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+import './Header.css';
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+const NewHeader = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleScroll = (event, id) => {
     event.preventDefault();
@@ -38,63 +35,29 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='navbar' id='header'>
-      <div className='navbar-container'>
-        <a
-          href='#'
-          className='navbar-logo'
-          onClick={(e) => handleScrollToTop(e)}
-        >
-          Logo
-        </a>
-        <div
-          className={`menu-icon ${isOpen ? 'active' : ''}`}
-          onClick={toggleMenu}
-        >
+    <header className='header'>
+      <div className='header-wrapper'>
+        <div className='header-logo'>LOGO</div>
+        <div className='header-toggle' onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <IconClose /> : <IconMenu />}
-          <i className={`fas ${isOpen ? 'fa-times' : 'fa-bars'}`}></i>
         </div>
-        <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
-          <li className='nav-item'>
-            <a
-              href='#home'
-              className='nav-links'
-              onClick={(e) => handleScrollToTop(e)}
-            >
-              Home
-            </a>
+        <ul className={`header-nav ${isOpen && 'header-nav-active'}`}>
+          <li className='header-nav-item'>
+            <a onClick={(e) => handleScrollToTop(e)}>Home</a>
           </li>
-          <li className='nav-item'>
-            <a
-              href='#about'
-              className='nav-links'
-              onClick={(e) => handleScroll(e, 'about')}
-            >
-              About
-            </a>
+          <li className='header-nav-item'>
+            <a onClick={(e) => handleScroll(e, 'about')}>About</a>
           </li>
-          <li className='nav-item'>
-            <a
-              href='#projects'
-              className='nav-links'
-              onClick={(e) => handleScroll(e, 'projects')}
-            >
-              Projects
-            </a>
+          <li className='header-nav-item'>
+            <a onClick={(e) => handleScroll(e, 'projects')}>Projects</a>
           </li>
-          <li className='nav-item'>
-            <a
-              href='#contact'
-              className='nav-links'
-              onClick={(e) => handleScroll(e, 'contact')}
-            >
-              Contact
-            </a>
+          <li className='header-nav-item'>
+            <a onClick={(e) => handleScroll(e, 'contact')}>Contact</a>
           </li>
         </ul>
       </div>
-    </nav>
+    </header>
   );
 };
 
-export default Navbar;
+export default NewHeader;
