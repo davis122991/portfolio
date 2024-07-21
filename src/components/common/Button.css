@@ -13,6 +13,12 @@
     color: #fff;
 }
 
+.disable {
+    background-color: #ccc;
+    border: 1px solid #4f4f4f;
+    cursor: auto;
+}
+
 @media screen and (max-width: 768px) {
     .btn {
         padding: 8px 26px;

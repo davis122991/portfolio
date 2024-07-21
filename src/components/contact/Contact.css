@@ -12,6 +12,10 @@ label {
     margin-bottom: .8rem;
 }
 
+.contact-group {
+    margin-bottom: 1rem;
+}
+
 input {
     display: block;
     padding: 1rem;
@@ -22,14 +26,22 @@ input {
     border-radius: 5px;
     font-weight: 400;
     letter-spacing: 1px;
-    margin-bottom: 1.5rem;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.error-msg {
+    color: red;
+    margin-top: .5rem;
+    font-size: .9rem;
 }
 
 textarea {
     width: 50%;
     resize: none;
     min-height: 200px;
-    margin-bottom: 1.5rem;
     padding: 1rem;
 }
 
